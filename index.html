@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine GitHub Pages Webseite</title>
+    <title>Login Seite</title>
 </head>
 <body>
-    <h1>Willkommen auf meiner GitHub Pages Webseite!</h1>
-    <p>Dies ist eine einfache statische Webseite, die über GitHub Pages gehostet wird.</p>
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Benutzername" required>
+        <input type="password" name="password" placeholder="Passwort" required>
+        <button type="submit">Anmelden</button>
+    </form>
+    <h2>Registrierung</h2>
+    <form action="/register" method="post">
+        <input type="text" name="username" placeholder="Benutzername" required>
+        <input type="password" name="password" placeholder="Passwort" required>
+        <button type="submit">Registrieren</button>
+    </form>
 </body>
 </html>
