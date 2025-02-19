@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Willkommen {{ username }}</h2>
+    <div class="chat-box">
+        {% for sender, message, timestamp in messages %}
+            <p><strong>{{ sender }}</strong> [{{ timestamp }}]: {{ message }}</p>
+        {% endfor %}
+    </div>
+    <form action="/send_message" method="post">
+        <input type="text" name="message" placeholder="Nachricht" required>
+        <button type="submit">Senden</button>
+    </form>
+    <a href="/logout">Logout</a>
+</body>
+</html>
